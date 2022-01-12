@@ -1,0 +1,31 @@
+$primary: red;
+$secondary: blue;
+$success: orange;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  background-color: aqua;
+}
+@mixin reset-list {
+  margin: 0;
+  padding: 2em;
+  list-style: none;
+  color: white;
+  font-weight: bolder;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+  li {
+    display: inline-block;
+    margin: {
+      left: 5px;
+      right: 5px;
+    }
+  }
+}
+
+ul {
+  @include horizontal-list;
+}
